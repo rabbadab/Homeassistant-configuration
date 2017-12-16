@@ -1,10 +1,39 @@
 # Home assistant specific ignore
-*
-!*.yaml
-!scenes
-!.gitignore
+*.pid
+*.xml
+*.csr
+*.crt
+*.key
+www
+OZW_Log.txt
+home-assistant.log
+home-assistant_v2.db
+home-assistant_v2_old.db
+home-assistant_v2.db-wal
+home-assistant_v2.db-shm
+google_calendars.yaml
+*.db-journal
+lib
+deps
+tts
+www
+.uuid
 secrets.yaml
+secrets.txt
 known_devices.yaml
+emulated_hue_ids.json
+*.conf
+plex.conf
+phue.conf
+tradfri.conf
+sabnzbd.conf
+harmony_harmony_hub.conf
+pyozw.sqlite
+.*
+!/.gitignore
+!/zwcfg_0xfaefd7f1.xml
+zwcfg_0xcd3b0f79.xml
+zwcfg_0xfaefd7f1.xml
 
 # MacOS ignore
 
