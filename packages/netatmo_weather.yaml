@@ -1,0 +1,22 @@
+netatmo:
+  api_key: !secret netatmo_bromma_api
+  secret_key: !secret netatmo_bromma_secret
+  username: !secret netatmo_bromma_user
+  password: !secret netatmo_bromma_pass
+
+sensor:
+  - platform: netatmo
+    station: Bromma
+    modules:
+      Bromma_in:
+        - temperature
+        - co2
+        - noise
+        - pressure
+        - humidity
+      Bromma_out:
+        - temperature
+        - humidity
+        - battery_vp
+        - min_temp
+        - max_temp

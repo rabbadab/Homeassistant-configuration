@@ -1,0 +1,20 @@
+- name: Disco on
+  entities:
+    switch.wall_plug_1_switch: on
+    switch.wall_plug_2_switch: on
+- name: Disco off
+  entities:
+    switch.wall_plug_1_switch: off
+    switch.wall_plug_2_switch: off
+- name: LR night on
+  entities:
+    light.living_room_big:
+      state: on
+      brightness: 80
+    light.living_room_small:
+      state: on
+      brightness: 80   
+- name: LR night off
+  entities:
+    light.living_room_big: off
+    light.living_room_small: off

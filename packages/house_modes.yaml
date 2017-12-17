@@ -1,0 +1,13 @@
+input_select:
+    house_mode:
+        name: House mode
+        options:
+            - Home
+            - Away
+            - Night
+            - Vacation
+    presence:
+        name: Presence
+        options:
+            - Home
+            - Away

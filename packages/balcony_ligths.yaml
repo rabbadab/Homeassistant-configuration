@@ -1,0 +1,19 @@
+automation:
+  - alias: Balcony light on
+    hide_entity: false
+    trigger:
+      - platform: sun
+        event: sunset
+        offset: "-00:30:00"
+    action:
+      - service: homeassistant.turn_on
+        entity_id: switch.wall_plug_out_1_switch
+
+  - alias: Balcony light off
+    hide_entity: false
+    trigger:
+      - platform: sun
+        event: sunrise
+    action:
+      - service: homeassistant.turn_off
+        entity_id: switch.wall_plug_out_1_switch

@@ -1,0 +1,11 @@
+# Weather prediction
+sensor:
+  - platform: yr
+    monitored_conditions:
+      - temperature
+      - symbol
+      - windSpeed
+      - pressure
+      - windDirection
+      - humidity
+      - cloudiness

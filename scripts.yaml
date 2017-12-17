@@ -1,0 +1,111 @@
+# radio538:
+#     alias: Play Radio on Chromecast Audio
+#     sequence:
+#       - service: media_player.volume_set
+#         data_template:
+#           entity_id: >
+#             {% if is_state("input_select.chromecast_radio", "Kitchen") %} media_player.kitchen
+#             {% elif is_state("input_select.chromecast_radio", "TV") %} media_player.tv
+#             {% elif is_state("input_select.chromecast_radio", "Bedroom") %} media_player.bedroom
+#             {% elif is_state("input_select.chromecast_radio", "Bathroom") %} media_player.bathroom
+#             {% elif is_state("input_select.chromecast_radio", "Everywhere") %} media_player.all
+#             {% endif %}
+#           volume_level: '{{  states.input_number.volume_radio.state  }}' 
+#       -  service: media_player.play_media
+#          data_template:
+#            entity_id: >
+#             {% if is_state("input_select.chromecast_radio", "Kitchen") %} media_player.kitchen
+#             {% elif is_state("input_select.chromecast_radio", "TV") %} media_player.tv
+#             {% elif is_state("input_select.chromecast_radio", "Bedroom") %} media_player.bedroom
+#             {% elif is_state("input_select.chromecast_radio", "Bathroom") %} media_player.bathroom
+#             {% elif is_state("input_select.chromecast_radio", "Everywhere") %} media_player.all
+#             {% endif %}
+#            media_content_id: >
+#             {% if is_state("input_select.radio_station", "P1") %} http://sverigesradio.se/topsy/direkt/132-hi.mp3
+#             {% elif is_state("input_select.radio_station", "P2") %} http://sverigesradio.se/topsy/direkt/2562-hi.mp3
+#             {% elif is_state("input_select.radio_station", "P3") %} http://sverigesradio.se/topsy/direkt/164-hi.mp3
+#             {% elif is_state("input_select.radio_station", "P4 Sthlm") %} http://sverigesradio.se/topsy/direkt/701-hi-mp3
+#             {% elif is_state("input_select.radio_station", "P5") %} http://sverigesradio.se/topsy/direkt/2842-hi.mp3
+#             {% elif is_state("input_select.radio_station", "Radioapans knattekanal") %} http://sverigesradio.se/topsy/direkt/2755-hi.mp3
+#             {% elif is_state("input_select.radio_station", "NRJ") %} http://tx-bauerse.sharp-stream.com/http_live.php?i=nrj_instreamtest_se_mp3
+#             {% elif is_state("input_select.radio_station", "Mixmegapol") %} http://tx-bauerse.sharp-stream.com/http_live.php?i=mixmegapol_instream_se_mp3
+#             {% elif is_state("input_select.radio_station", "Rockklassiker") %} http://tx-bauerse.sharp-stream.com/http_live.php?i=rockklassiker_instream_se_mp3
+#             {% elif is_state("input_select.radio_station", "Svensk Pop") %} http://tx-bauerse.sharp-stream.com/http_live.php?i=svenskpop_se_mp3
+#             {% elif is_state("input_select.radio_station", "Vinyl FM") %} http://tx-bauerse.sharp-stream.com/http_live.php?i=vinylfm_instream_se_mp3
+#             {% elif is_state("input_select.radio_station", "Ambient Sleeping Pill") %} http://perseus.shoutca.st:8447/h
+#             {% elif is_state("input_select.radio_station", "Radio Art - Sleep") %} http://live.radioart.com/fSleep.mp3
+#             {% elif is_state("input_select.radio_station", "Ambi Nature Radio") %} http://94.23.252.14:8067/stream
+#             {% elif is_state("input_select.radio_station", "Calm Radio - Sleep") %} http://streams.calmradio.com/api/39/128/stream
+#             {% elif is_state("input_select.radio_station", "Dinamo.FM Sleep") %} http://channels.dinamo.fm/sleep-aac
+#             {% endif %}
+#            media_content_type: 'audio/mp4'
+# radio538:
+#     alias: Play Radio on Chromecast Audio
+#     sequence:
+#       - service: media_player.volume_set
+#         data:
+#           entity_id: media_player.kitchen
+#           volume_level: '0.35'
+#       -  service: media_player.volume_set
+#          data:
+#            entity_id: media_player.bedroom
+#            volume_level: '0.20'
+#       -  service: media_player.volume_set
+#          data:
+#            entity_id: media_player.tv
+#            volume_level: '0.30'
+#       -  service: media_player.play_media
+#          data_template:
+#            entity_id: >
+#             {% if is_state("input_select.chromecast_radio", "Kitchen") %} media_player.kitchen
+#             {% elif is_state("input_select.chromecast_radio", "TV") %} media_player.tv
+#             {% elif is_state("input_select.chromecast_radio", "Bedroom") %} media_player.bedroom
+#             {% elif is_state("input_select.chromecast_radio", "Bathroom") %} media_player.bathroom
+#             {% elif is_state("input_select.chromecast_radio", "Everywhere") %} media_player.all
+#             {% endif %}
+#            media_content_id: >
+#             {% if is_state("input_select.radio_station", "P1") %} http://sverigesradio.se/topsy/direkt/132-hi.mp3
+#             {% elif is_state("input_select.radio_station", "P2") %} http://sverigesradio.se/topsy/direkt/2562-hi.mp3
+#             {% elif is_state("input_select.radio_station", "P3") %} http://sverigesradio.se/topsy/direkt/164-hi.mp3
+#             {% elif is_state("input_select.radio_station", "P4 Sthlm") %} http://sverigesradio.se/topsy/direkt/701-hi-mp3
+#             {% elif is_state("input_select.radio_station", "P5") %} http://sverigesradio.se/topsy/direkt/2842-hi.mp3
+#             {% elif is_state("input_select.radio_station", "Radioapans knattekanal") %} http://sverigesradio.se/topsy/direkt/2755-hi.mp3
+#             {% elif is_state("input_select.radio_station", "NRJ") %} http://tx-bauerse.sharp-stream.com/http_live.php?i=nrj_instreamtest_se_mp3
+#             {% elif is_state("input_select.radio_station", "Mixmegapol") %} http://tx-bauerse.sharp-stream.com/http_live.php?i=mixmegapol_instream_se_mp3
+#             {% elif is_state("input_select.radio_station", "Rockklassiker") %} http://tx-bauerse.sharp-stream.com/http_live.php?i=rockklassiker_instream_se_mp3
+#             {% elif is_state("input_select.radio_station", "Svensk Pop") %} http://tx-bauerse.sharp-stream.com/http_live.php?i=svenskpop_se_mp3
+#             {% elif is_state("input_select.radio_station", "Vinyl FM") %} http://tx-bauerse.sharp-stream.com/http_live.php?i=vinylfm_instream_se_mp3
+#             {% elif is_state("input_select.radio_station", "Ambient Sleeping Pill") %} http://perseus.shoutca.st:8447/h
+#             {% elif is_state("input_select.radio_station", "Radio Art - Sleep") %} http://live.radioart.com/fSleep.mp3
+#             {% elif is_state("input_select.radio_station", "Ambi Nature Radio") %} http://94.23.252.14:8067/stream
+#             {% elif is_state("input_select.radio_station", "Calm Radio - Sleep") %} http://streams.calmradio.com/api/39/128/stream
+#             {% elif is_state("input_select.radio_station", "Dinamo.FM Sleep") %} http://channels.dinamo.fm/sleep-aac
+#             {% endif %}
+#            media_content_type: 'audio/mp4'
+
+
+# spotify_music:
+# alias: Play selected spotify playlist
+# sequence:
+#   - service: media_player.volume_set
+#     data:
+#       entity_id: media_player.spotify
+#       volume_level: '0.40'
+#   -  service: media_player.select_source
+#      data_template: 
+#        entity_id: media_player.spotify
+#        source: >
+#         {% if is_state("input_select.spotify_source", "Bathroom Home") %} Bathroom Home
+#         {% elif is_state("input_select.spotify_source", "TV speaker") %} TV speaker
+#         {% endif %}
+#   -  service: media_player.play_media
+#      data_template:
+#        entity_id: media_player.spotify
+#        media_content_type: playlist
+#        media_content_id: >
+#         {% if is_state("input_select.spotify_playlist", "Morning Commute") %} spotify:user:spotify:playlist:37i9dQZF1DX2MyUCsl25eb
+#         {% elif is_state("input_select.spotify_playlist", "Cinematic Chill-Out") %} spotify:user:spotify:playlist:37i9dQZF1DWVFJtzvDHN4L
+#         {% elif is_state("input_select.spotify_playlist", "FUTURESYNTH") %} spotify:user:12131571557:playlist:2JgjNysZhksrtRjuGbbWns
+#         {% elif is_state("input_select.spotify_playlist", "From a Smokey Bar") %} spotify:user:spotify:playlist:37i9dQZF1DWTlzJXLRpd4a 
+#         {% elif is_state("input_select.spotify_playlist", "Piano in the Background") %} spotify:user:spotify:playlist:37i9dQZF1DX7K31D69s4M1
+#         {% endif %}

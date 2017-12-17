@@ -1,0 +1,21 @@
+automation:
+  - alias: Routine - Sunset
+    trigger:
+      platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation | int }}'
+      below: 5
+    action:
+      - service: automation.turn_on
+        entity_id:
+          - automation.motion__living_room_light
+  - alias: Routine - Sunsrise
+    trigger:
+      platform: numeric_state
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation | int }}'
+      above: 5
+    action:
+      - service: automation.turn_off
+        entity_id:
+          - aautomation.motion__living_room_light

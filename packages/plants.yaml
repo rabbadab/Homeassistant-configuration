@@ -1,0 +1,131 @@
+# Example configuration.yaml entry
+plant:
+  plant1:
+    sensors:
+      moisture: sensor.my_plant1_moisture
+      battery: sensor.my_plant1_battery
+      temperature: sensor.my_plant1_temperature
+      conductivity: sensor.my_plant1_conductivity
+      brightness: sensor.my_plant1_brightness
+    min_moisture: 20
+    max_moisture: 60
+    min_battery: 17
+    min_conductivity: 200
+    min_temperature: 15
+  plant2:
+    sensors:
+      moisture: sensor.my_plant2_moisture
+      battery: sensor.my_plant2_battery
+      temperature: sensor.my_plant2_temperature
+      conductivity: sensor.my_plant2_conductivity
+      brightness: sensor.my_plant2_brightness
+    min_moisture: 20
+    max_moisture: 60
+    min_battery: 17
+    min_conductivity: 200
+    min_temperature: 15
+  plant3:
+    sensors:
+      moisture: sensor.my_plant3_moisture
+      battery: sensor.my_plant3_battery
+      temperature: sensor.my_plant3_temperature
+      conductivity: sensor.my_plant3_conductivity
+      brightness: sensor.my_plant3_brightness
+    min_moisture: 20
+    max_moisture: 60
+    min_battery: 17
+    min_conductivity: 200
+    min_temperature: 15
+  plant4:
+    sensors:
+      moisture: sensor.my_plant4_moisture
+      battery: sensor.my_plant4_battery
+      temperature: sensor.my_plant4_temperature
+      conductivity: sensor.my_plant4_conductivity
+      brightness: sensor.my_plant4_brightness
+    min_moisture: 20
+    max_moisture: 60
+    min_battery: 17
+    min_conductivity: 200
+    min_temperature: 15    
+sensor:
+  - platform: mqtt
+    name: my_plant1_moisture
+    state_topic: plantgw/flower1/
+    value_template: '{{ value_json.moisture }}'
+  - platform: mqtt
+    name: my_plant1_battery
+    state_topic: plantgw/flower1/
+    value_template: '{{ value_json.battery }}'
+  - platform: mqtt
+    name: my_plant1_temperature
+    state_topic: plantgw/flower1/
+    value_template: '{{ value_json.temperature }}'
+  - platform: mqtt
+    name: my_plant1_conductivity
+    state_topic: plantgw/flower1/
+    value_template: '{{ value_json.conductivity }}'
+  - platform: mqtt
+    name: my_plant1_brightness
+    state_topic: plantgw/flower1/
+    value_template: '{{ value_json.brightness }}'
+  - platform: mqtt
+    name: my_plant2_moisture
+    state_topic: plantgw/flower2/
+    value_template: '{{ value_json.moisture }}'
+  - platform: mqtt
+    name: my_plant2_battery
+    state_topic: plantgw/flower2/
+    value_template: '{{ value_json.battery }}'
+  - platform: mqtt
+    name: my_plant2_temperature
+    state_topic: plantgw/flower2/
+    value_template: '{{ value_json.temperature }}'
+  - platform: mqtt
+    name: my_plant2_conductivity
+    state_topic: plantgw/flower2/
+    value_template: '{{ value_json.conductivity }}'
+  - platform: mqtt
+    name: my_plant2_brightness
+    state_topic: plantgw/flower2/
+    value_template: '{{ value_json.brightness }}'
+  - platform: mqtt
+    name: my_plant3_moisture
+    state_topic: plantgw/flower3/
+    value_template: '{{ value_json.moisture }}'
+  - platform: mqtt
+    name: my_plant3_battery
+    state_topic: plantgw/flower3/
+    value_template: '{{ value_json.battery }}'
+  - platform: mqtt
+    name: my_plant3_temperature
+    state_topic: plantgw/flower3/
+    value_template: '{{ value_json.temperature }}'
+  - platform: mqtt
+    name: my_plant3_conductivity
+    state_topic: plantgw/flower3/
+    value_template: '{{ value_json.conductivity }}'
+  - platform: mqtt
+    name: my_plant3_brightness
+    state_topic: plantgw/flower3/
+    value_template: '{{ value_json.brightness }}'
+  - platform: mqtt
+    name: my_plant4_moisture
+    state_topic: plantgw/flower4/
+    value_template: '{{ value_json.moisture }}'
+  - platform: mqtt
+    name: my_plant4_battery
+    state_topic: plantgw/flower4/
+    value_template: '{{ value_json.battery }}'
+  - platform: mqtt
+    name: my_plant4_temperature
+    state_topic: plantgw/flower4/
+    value_template: '{{ value_json.temperature }}'
+  - platform: mqtt
+    name: my_plant4_conductivity
+    state_topic: plantgw/flower4/
+    value_template: '{{ value_json.conductivity }}'
+  - platform: mqtt
+    name: my_plant4_brightness
+    state_topic: plantgw/flower4/
+    value_template: '{{ value_json.brightness }}'

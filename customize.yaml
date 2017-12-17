@@ -1,0 +1,57 @@
+binary_sensor.flic_80e4da72b32b:
+  friendly_name: Flic black 1
+binary_sensor.flic_80e4da7346fd:
+  friendly_name: Flic black 2
+binary_sensor.flic_80e4da70f008:
+  friendly_name: Flic green
+binary_sensor.flic_80e4da730087:
+  friendly_name: Flic white 1
+binary_sensor.flic_80e4da736180:
+  friendly_name: Flic white 2
+binary_sensor.flic_80e4da735e48:
+  friendly_name: Flic black 3
+switch.switch:
+  friendly_name: Wall plug 1
+sensor.fibaro_system_fgwpef_wall_plug_exporting:
+  friendly_name: Wall Plug 1 Exporting
+sensor.fibaro_system_fgwpef_wall_plug_power:
+  friendly_name: Wall Plug 2 Power
+sensor.fibaro_system_fgwpef_wall_plug_power_2:
+  friendly_name: Wall Plug 1 Power
+sensor.unknown:
+  friendly_name: Wall plug 1 kwh
+zwave._:
+  friendly_name: Wall plug 1 zwave
+zwave.__2:
+  friendly_name: ' Wall plug 2 zwave'
+sensor.fibaro_system_fgwpef_wall_plug_exporting_2:
+  friendly_name: FIBARO System FGWPE/F Wall Plug 2 Exporting
+sensor.fibaro_system_fgwpef_wall_plug_power_3:
+  friendly_name: FIBARO System FGWPE/F Wall Plug 2 Power
+sensor.fibaro_system_fgwpef_wall_plug_power_4:
+  friendly_name: FIBARO System FGWPE/F Wall Plug 2 Power
+switch.switch_2:
+  friendly_name: Wall plug 2
+sensor.unknown_2:
+  friendly_name: Wall plug 2 kWh
+script.spotify_music:
+  friendly_name: Spotify
+  icon: mdi:play
+switch.fibaro_system_fgwpef_wall_plug_switch:
+  friendly_name: Wall plug 2
+zwave.fibaro_system_fgwpef_wall_plug:
+  friendly_name: Wall plug 2
+sensor.fibaro_system_fgwpef_wall_plug_energy:
+  friendly_name: Wall Plug 2 Energy
+zwave.wall_plug_1:
+  friendly_name: Wall plug 1
+sensor.wall_plug_1_power:
+  friendly_name: Wall plug 1 Power
+sensor.wall_plug_1_energy:
+  friendly_name: Wall plug 1 Energy
+sensor.wall_plug_1_power_2:
+  friendly_name: Wall plug 1 Power
+sensor.wall_plug_1_exporting:
+  friendly_name: Wall plug 1 Exporting
+switch.wall_plug_1_switch:
+  friendly_name: Wall plug 1 Switch

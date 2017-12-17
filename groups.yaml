@@ -1,0 +1,226 @@
+#Groups
+  livingroomlights:
+    name: Lights livingroom
+    view: no
+    entities:
+    - light.living_room_big
+    - light.living_room_small
+  xmas:
+    name: X-mas
+    view: no
+    entities:
+    - switch.wall_plug_3_switch
+    - switch.wall_plug_4_switch
+    - switch.wall_plug_5_switch
+  bedroomsmall:
+    name: Bedroom small
+    view: no
+    entities:
+    - light.bedroom_small_color
+    - switch.wall_plug_2_switch
+    - switch.wall_plug_1_switch
+  bedroom_big:
+    view: no
+    name: Bedroom big
+    entities:
+    - light.bedroom_lotta
+    - light.lightstrip_1
+    - light.broken_lamp
+  balcony:
+    name: Balcony
+    view: no
+    entities:
+    - switch.wall_plug_out_1_switch
+  netatmo:
+    name: Vädret i Bromma
+    view: no
+    entities:
+    - sensor.netatmo_bromma_in_co2
+    - sensor.netatmo_bromma_in_humidity
+    - sensor.netatmo_bromma_in_noise
+    - sensor.netatmo_bromma_in_pressure
+    - sensor.netatmo_bromma_in_temperature
+    - sensor.netatmo_bromma_in_wifi
+    - sensor.netatmo_bromma_out_battery
+    - sensor.netatmo_bromma_out_humidity
+    - sensor.netatmo_bromma_out_radio
+    - sensor.netatmo_bromma_out_temperature
+  miflower:
+    name: Flowers
+    view: no
+    entities:
+    - sensor.my_plant1_battery
+    - sensor.my_plant1_brightness
+    - sensor.my_plant1_conductivity
+    - sensor.my_plant1_moisture
+    - sensor.my_plant1_temperature
+    - sensor.my_plant2_battery
+    - sensor.my_plant2_brightness
+    - sensor.my_plant2_conductivity
+    - sensor.my_plant2_moisture
+    - sensor.my_plant2_temperature
+    - sensor.my_plant3_battery
+    - sensor.my_plant3_brightness
+    - sensor.my_plant3_conductivity
+    - sensor.my_plant3_moisture
+    - sensor.my_plant3_temperature
+    - sensor.my_plant4_battery
+    - sensor.my_plant4_brightness
+    - sensor.my_plant4_conductivity
+    - sensor.my_plant4_moisture
+    - sensor.my_plant4_temperature
+  energypower:
+    name: Energy power
+    view: no
+    entities:
+    - sensor.wall_plug_1_energy
+    - sensor.wall_plug_1_power
+    - sensor.wall_plug_2_energy
+    - sensor.wall_plug_2_power
+    - sensor.wall_plug_3_energy
+    - sensor.wall_plug_3_power
+    - sensor.wall_plug_4_energy
+    - sensor.wall_plug_4_power
+    - sensor.wall_plug_5_energy
+    - sensor.wall_plug_5_power
+  allmedia:
+    name: All media
+    view: yes
+    icon: mdi:cast
+    entities:
+    - media_player.bedroom
+    - media_player.apple_tv
+    - media_player.bathroom_home
+    - media_player.galaxy_s8
+    - media_player.kitchen
+    - media_player.kitchen_bedroom_
+    - media_player.plex_web_chrome
+    - media_player.shield_tablet_k1
+    - media_player.spotify
+    - media_player.tv
+    - media_player.tv_speaker_2
+  allsensors:
+    name: All sensors
+    view: no
+    entities:
+    - sensor.door_sensor_1_temperature
+    - sensor.motion_sensor_1_luminance
+    - sensor.motion_sensor_1_temperature
+    - binary_sensor.door_sensor_1_sensor
+    - sensor.door_sensor_1_access_control
+    - sensor.door_sensor_1_alarm_level
+    - sensor.door_sensor_1_alarm_type
+    - sensor.door_sensor_1_burglar
+    - sensor.door_sensor_1_heat
+    - sensor.door_sensor_1_power_management
+    - sensor.door_sensor_1_sourcenodeid
+    - sensor.motion_sensor_1_alarm_level
+    - sensor.motion_sensor_1_alarm_type
+    - sensor.motion_sensor_1_burglar
+    - sensor.motion_sensor_1_general
+    - sensor.motion_sensor_1_seismic_intensity
+    - sensor.motion_sensor_1_sourcenodeid
+    - sensor.sabnzbd_status
+    - sensor.wall_plug_1_exporting
+    - sensor.wall_plug_1_power_2
+    - sensor.wall_plug_2_exporting
+    - sensor.wall_plug_2_power_2
+    - sensor.wall_plug_2_interval
+    - sensor.wall_plug_2_previous_reading
+    - sensor.wall_plug_3_alarm_level
+    - sensor.wall_plug_3_alarm_type
+    - sensor.wall_plug_3_exporting
+    - sensor.wall_plug_3_power_2
+    - sensor.wall_plug_3_power_management
+    - sensor.wall_plug_3_sourcenodeid
+    - sensor.wall_plug_4_alarm_level
+    - sensor.wall_plug_4_alarm_type
+    - sensor.wall_plug_4_exporting
+    - sensor.wall_plug_4_power_2
+    - sensor.wall_plug_4_power_management
+    - sensor.wall_plug_4_sourcenodeid
+    - sensor.wall_plug_5_alarm_level
+    - sensor.wall_plug_5_alarm_type
+    - sensor.wall_plug_5_exporting
+    - sensor.wall_plug_5_power_2
+    - sensor.wall_plug_5_power_management
+    - sensor.wall_plug_5_sourcenodeid
+  weatherall:
+    name: All weather
+    view: no
+    entities:
+    - sun.sun
+    - sensor.yr_cloudiness
+    - sensor.yr_humidity
+    - sensor.yr_pressure
+    - sensor.yr_symbol
+    - sensor.yr_temperature
+    - sensor.yr_wind_direction
+    - sensor.yr_wind_speed
+  zwavwall:
+    name: All zwave
+    view: yes
+    entities:
+    - zwave.aeotec_zw090_zstick_gen5_eu
+    - zwave.door_sensor_1
+    - zwave.motion_sensor_1
+    - zwave.wall_plug_1
+    - zwave.wall_plug_2
+    - zwave.wall_plug_3
+  alllights:
+    name: All lights
+    icon: mdi:lightbulb
+    view: yes
+    entities:
+    - group.livingroomlights
+    - group.bedroomsmall
+    - group.bedroom_big
+    - group.xmas
+    - group.balcony
+  hedgrind:
+    name: Hedgrind
+    view: no
+    entities:
+    - binary_sensor.entre
+    - binary_sensor.altan
+    - lock.entre
+    - sensor.hall_humidity
+    - sensor.hall_temperature
+    - sensor.hall_temperature_2
+    - sensor.kallare_humidity
+    - sensor.kallare_temperature
+    - alarm_control_panel.hedasvagen_alarm
+  uber:
+    name: Uber
+    view: no
+    control: hidden
+    entities:
+    - sensor.uberblack_price
+    - sensor.uberblack_time
+    - sensor.uberlux_price
+    - sensor.uberlux_time
+    - sensor.uberx_price
+    - sensor.uberx_time
+    - sensor.uberxl_price
+    - sensor.uberxl_time
+  flic:
+    name: Flic
+    view: no
+    control: hidden
+    entities:
+    - binary_sensor.flic_80e4da70f008
+    - binary_sensor.flic_80e4da72b32b
+    - binary_sensor.flic_80e4da730087
+    - binary_sensor.flic_80e4da7346fd
+    - binary_sensor.flic_80e4da736180
+    - binary_sensor.flic_80e4da735e48
+  tradfri_battery:
+    name: Trådfri batteri
+    view: no
+    control: hidden
+    entities:
+    - sensor.remote_maja
+    - sensor.tradfri_motion_sensor
+    - sensor.tradfri_remote_control
+    - sensor.tradfri_wireless_dimmer
+    - sensor.vardagsrummet

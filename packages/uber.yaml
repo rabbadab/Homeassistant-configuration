@@ -1,0 +1,5 @@
+sensor:
+  - platform: uber
+    start_latitude: !secret home_lat
+    start_longitude: !secret home_long
+    server_token: !secret uber_token

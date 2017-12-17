@@ -1,0 +1,6 @@
+# sensor:
+#   - platform: gtfs
+#     origin: 740049243
+#     destination: 740020581
+#     data: sweden.zip
+#     name: buss 117

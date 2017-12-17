@@ -1,0 +1,64 @@
+#
+# Main arguments, all optional
+#
+title: Bromma
+widget_dimensions: [140, 140]
+widget_margins: [5, 5]
+columns: 8
+use_hass_icon: 1
+    
+layout:
+    - clock(2x1),all_lights, group.all_switches, bedroom_lamp,bedroom_lightstrip
+    - switch.wall_plug_1_switch, maja_room_disco, media_player.kitchen(2x2)
+    - switch.wall_plug_3_switch, vacuum
+#    - sensor.yr_symbol, sun.sun
+#    - remote.harmony_hub, vacuum.xiaomi_vacuum_cleaner
+    
+
+clock:
+    widget_type: clock
+    time_format: 24hr
+    show_seconds: 1 
+weather:
+    widget_type: weather
+    units: "&deg;C"
+
+bedroom_lightstrip:
+    title: Bedroom Lightstrip
+    widget_type: light
+    entity: light.lightstrip_1
+    icon_on: mdi-lightbulb-on-outline
+    icon_off: mdi-lightbulb-outline
+
+bedroom_lamp:
+    title: Bedroom Light
+    widget_type: light
+    entity: light.broken_lamp
+    icon_on: mdi-lightbulb-on-outline
+    icon_off: mdi-lightbulb-outline
+
+all_lights:
+    title: All lights
+    widget_type: group
+    entity: group.all_lights
+    icon_on: mdi-lightbulb-on-outline
+    icon_off: mdi-lightbulb-outline
+maja_room_disco:
+    title: Maja Disco
+    widget_type: switch
+    entity: switch.wall_plug_2_switch
+    icon_on: fa-music
+    icon_off: fa-music
+vacuum:
+    icon_on: mdi-play
+    icon_off: mdi-play
+    title: Vacuum
+    entity: vacuum.xiaomi_vacuum_cleaner
+    state_entity: vacuum.xiaomi_vacuum_cleaner
+    # icon_style_active: $switch_icon_style_active 
+    # icon_style_inactive: $switch_icon_style_inactive
+    widget_type: switch
+    post_service_active:
+      service: vacuum/turn_on
+    post_service_inactive:
+      service: vacuum/turn_off

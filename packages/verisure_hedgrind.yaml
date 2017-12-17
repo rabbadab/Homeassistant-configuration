@@ -1,0 +1,3 @@
+verisure:
+  username: !secret verisure_hedgrind_user
+  password: !secret verisure_hedgrind_password

@@ -1,0 +1,27 @@
+automation:
+  - alias: x-mas tree on
+    hide_entity: false
+    trigger:
+      - platform: time
+        at: "06:20:00"
+    action:
+      - service: homeassistant.turn_on
+        entity_id: switch.wall_plug_3_switch
+  - alias: x-mas tree off
+    hide_entity: false
+    trigger:
+      - platform: time
+        at: "22:00:00"
+    action:
+      - service: homeassistant.turn_off
+        entity_id: switch.wall_plug_3_switch
+  - alias: x-mas tree btn toggle
+    trigger:
+      platform: event
+      event_type: flic_click
+      event_data:
+        button_name: flic_80e4da735e48
+        click_type: single
+    action:
+      service: switch.toggle
+      entity_id: switch.wall_plug_3_switch

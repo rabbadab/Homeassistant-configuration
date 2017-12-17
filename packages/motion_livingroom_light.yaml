@@ -1,0 +1,20 @@
+automation:
+  - alias: Motion - living room light
+    trigger:
+      platform: state
+      entity_id: binary_sensor.motion_sensor_1_sensor
+      to: 'on'
+    action:
+      - condition: state
+        entity_id: group.livingroomlights
+        state: 'off'
+      - service: homeassistant.turn_on
+        entity_id: group.livingroomlights
+      - wait_template: "{{is_state('binary_sensor.motion_sensor_1_sensor', 'off')}}"
+      - delay: 00:00:05
+      - wait_template: "{{is_state('binary_sensor.motion_sensor_1_sensor', 'off')}}"
+      - condition: state
+        entity_id: group.livingroomlights
+        state: 'on'
+      - service: lhomeassistant.turn_off
+        entity_id: group.livingroomlights

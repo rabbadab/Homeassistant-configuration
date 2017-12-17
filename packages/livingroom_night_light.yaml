@@ -1,0 +1,28 @@
+# automation:
+#   - alias: Turn ON living room light at night on movement
+#     trigger:
+#       platform: state
+#       entity_id: binary_sensor.motion_sensor_1_sensor
+#       to: 'on'
+#     condition:
+#       condition: and
+#       conditions:
+#         - condition: state
+#           entity_id: sun.sun
+#           state: 'below_horizon'
+#         - condition: state
+#           entity_id: group.livingroomlights
+#           state: 'off'
+#     action:
+#       service: homeassistant.turn_on
+#       entity_id: group.livingroomlights
+#   - alias: Turn OFF living room light at night no movement
+#     trigger:
+#       platform: state
+#       entity_id: binary_sensor.motion_sensor_1_sensor
+#       to: 'off'
+#       for:
+#         minutes: 10
+#     action:
+#       service: homeassistant.turn_off
+#       entity_id: group.livingroomlights

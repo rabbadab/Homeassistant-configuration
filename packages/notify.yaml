@@ -1,0 +1,9 @@
+notify:
+  - platform: pushover
+    name: pushover_notify
+    api_key: !secret pushover_api_key
+    user_key: !secret pushover_user_key
+  # - platform: lametric
+  #   name: lametric1
+  #   display_time: 20
+  #   icon: i7050

@@ -1,0 +1,156 @@
+- action:
+  - data:
+      entity_id: media_player.kitchen
+      language: sv
+      message: 'Maja vill ha hjälp på toaletten! Bajs eller kiss! '
+    service: tts.google_say
+  - data:
+      message: Maja behöver hjälp på toa
+    service: notify.pushover_notify
+  - data:
+      entity_id: media_player.kitchen_bedroom_
+      volume_level: '0.2'
+    service: media_player.volume_set
+  alias: Maja poop
+  condition: []
+  id: '1504374245454'
+  trigger:
+  - event_data:
+      button_name: flic_80e4da730087
+      click_type: single
+    event_type: flic_click
+    platform: event
+- action:
+  - data:
+      entity_id: media_player.kitchen_bedroom_
+      language: sv
+      message: Pappa vill ha hjälp på toaletten! Det är mycket bajs!
+    service: tts.google_say
+  - data:
+      entity_id: media_player.kitchen_bedroom_
+      volume_level: '0.2'
+    service: media_player.volume_set
+  alias: Maja poop hold
+  condition: []
+  id: '1504538963666'
+  trigger:
+  - event_data:
+      button_name: flic_80e4da730087
+      click_type: hold
+    event_type: flic_click
+    platform: event
+- action:
+  - data:
+      entity_id: media_player.kitchen_bedroom_
+      language: sv
+      message: Mamma vill ha hjälp på toaletten! Det är så mycket bajs!
+    service: tts.google_say
+  - data:
+      entity_id: media_player.kitchen_bedroom_
+      volume_level: '0.2'
+    service: media_player.volume_set
+  alias: Maja poop double
+  condition: []
+  id: '1504539227981'
+  trigger:
+  - event_data:
+      button_name: flic_80e4da730087
+      click_type: double
+    event_type: flic_click
+    platform: event
+- action:
+  - data:
+      entity_id: group.all_lights
+    service: light.turn_off
+  - data:
+      entity_id: remote.harmony_hub
+    service: remote.turn_off
+  alias: Turn off all lights
+  condition: []
+  id: '1504544455038'
+  trigger:
+  - event_data:
+      button_name: flic_80e4da72b32b
+      click_type: hold
+    event_type: flic_click
+    platform: event
+  - event_data:
+      button_name: flic_80e4da7346fd
+      click_type: hold
+    event_type: flic_click
+    platform: event
+- action:
+  - data:
+      entity_id: group.all_lights
+    service: light.turn_on
+  alias: Turn on all lights
+  condition: []
+  id: '1504545879480'
+  trigger:
+  - event_data:
+      button_name: flic_80e4da72b32b
+      click_type: single
+    event_type: flic_click
+    platform: event
+  - event_data:
+      button_name: flic_80e4da7346fd
+      click_type: single
+    event_type: flic_click
+    platform: event
+- action:
+  - data:
+      message: Det rör sig hemma
+    service: notify.pushover_notify
+  alias: Motion at home 8-17
+  condition:
+  - after: 08:00:00
+    before: '17:00:00'
+    condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  id: '1508077330229'
+  trigger:
+  - entity_id: sensor.motion_sensor_1_burglar
+    platform: state
+    to: '8'
+- action:
+  - data:
+      message: Hello world
+    service: notify.lametric1
+  alias: test notify
+  condition: []
+  id: '1508535766590'
+  trigger: []
+- action:
+  - data:
+      entity_id: light.broken_lamp
+    service: light.toggle
+  alias: Lotta btn white 1
+  condition: []
+  id: '1510861153715'
+  trigger:
+  - event_data:
+      button_name: flic_80e4da736180
+      click_type: single
+    event_type: flic_click
+    platform: event
+- action:
+  - data:
+      entity_id: light.broken_lamp
+    service: light.off
+  - data:
+      entity_id: light.bedroom_lotta
+    service: light.off
+  alias: Lotta btn white off
+  condition: []
+  id: '1510861384370'
+  trigger:
+  - event_data:
+      button_name: flic_80e4da736180
+      click_type: double
+    event_type: flic_click
+    platform: event

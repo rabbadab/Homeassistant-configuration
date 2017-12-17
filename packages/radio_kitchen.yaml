@@ -1,0 +1,60 @@
+# input_number: 
+#   volume_radio:
+#     name: Volume
+#     icon: mdi:volume-high
+#     min: 0
+#     max: 1
+#     step: 0.05
+#   spotify_volume:
+#     name: Ljud
+#     icon: mdi:volume-high
+#     min: 0
+#     max: 1
+#     step: 0.05
+# input_select:
+#   radio_station:
+#     name: 'Select Radio Station:'
+#     options:
+#       - P1
+#       - P2
+#       - P3
+#       - P4 Sthlm
+#       - P5
+#       - Radioapans knattekanal
+#       - NRJ
+#       - Mixmegapol
+#       - Rockklassiker
+#       - Svensk Pop
+#       - Vinyl FM
+#       - Ambient Sleeping Pill
+#       - Radio Art - Sleep
+#       - Ambi Nature Radio
+#       - Calm Radio - Sleep
+#       - Dinamo.FM Sleep
+#     initial: P3
+#   chromecast_radio:
+#     name: 'Select Speakers:'
+#     options:
+#       - TV
+#       - Bedroom
+#       - Bathroom
+#       - Kitchen
+#       - Everywhere
+#     initial: Kitchen
+#     icon: mdi:speaker-wireless
+#   spotify_playlist:
+#     name: 'Playlist:'
+#     options:
+#       - Morning Commute
+#       - Cinematic Chill-Out
+#       - FUTURESYNTH
+#       - From a Smokey Bar
+#       - Piano in the Background
+#     icon: mdi:spotify
+#   spotify_source:
+#     name: 'Source:'
+#     options:
+#       - Bathroom Home
+#       - TV speaker
+#     initial: Bathroom Home
+#     icon: mdi:speaker-wireless
