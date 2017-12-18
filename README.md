@@ -1,5 +1,5 @@
 # Home assistant configuration
-** Bromma version **
+**Bromma version**
 
 
 ---
